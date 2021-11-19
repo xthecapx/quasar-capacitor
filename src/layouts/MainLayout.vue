@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Ellis app </q-toolbar-title>
+        <q-toolbar-title> My Bank information </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
@@ -35,7 +35,7 @@
         style="height: 150px"
       >
         <div class="absolute-bottom bg-transparent">
-          <q-avatar rounded size="56px" class="q-mb-sm" color="primary">
+          <q-avatar rounded size="56px" class="q-mb-sm" color="lime-9">
             {{ users[0]?.initials }}
           </q-avatar>
           <div class="text-weight-bold">Razvan Stoenescu</div>
