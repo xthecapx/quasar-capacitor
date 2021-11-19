@@ -1,34 +1,22 @@
 <template>
-  <div class="q-gutter-md">
-    <q-list>
-      <q-item v-for="transaction in transactions" :key="transaction.id">
-        <q-item-section>
-          <q-item-label>{{ transaction.description }}</q-item-label>
-          <q-item-label caption lines="2">
-            {{ `${transaction.direction}: ${transaction.amount}` }}
-          </q-item-label>
-        </q-item-section>
+  <q-list>
+    <q-item v-for="transaction in transactions" :key="transaction.id">
+      <q-item-section>
+        <q-item-label>{{ transaction.description }}</q-item-label>
+        <q-item-label caption lines="2">
+          {{ `${transaction.direction}: ${transaction.amount}` }}
+        </q-item-label>
+      </q-item-section>
 
-        <q-item-section side top>
-          <q-item-label caption>{{ transaction.posted }}</q-item-label>
-          <q-icon
-            :name="transaction.status === 'Posted' ? 'done_all' : 'pending'"
-            :color="transaction.status === 'Posted' ? 'green' : 'orange'"
-          />
-        </q-item-section>
-      </q-item>
-
-      <q-separator spaced inset />
-    </q-list>
-
-    <q-page-scroller
-      position="bottom-right"
-      :scroll-offset="150"
-      :offset="[18, 18]"
-    >
-      <q-btn fab icon="keyboard_arrow_up" color="accent" />
-    </q-page-scroller>
-  </div>
+      <q-item-section side top>
+        <q-item-label caption>{{ transaction.posted }}</q-item-label>
+        <q-icon
+          :name="transaction.status === 'Posted' ? 'done_all' : 'pending'"
+          :color="transaction.status === 'Posted' ? 'green' : 'orange'"
+        />
+      </q-item-section>
+    </q-item>
+  </q-list>
 </template>
 
 <script lang="ts">

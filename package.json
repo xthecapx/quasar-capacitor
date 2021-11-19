@@ -7,8 +7,10 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
+    "android": "quasar dev -m capacitor -T android",
     "build": "quasar build",
     "build:pwa": "quasar build -m pwa",
+    "build:android": "quasar build --mode capacitor --target android",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },

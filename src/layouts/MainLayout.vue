@@ -1,21 +1,19 @@
 <template>
   <q-layout view="lhh LpR fFf">
-    <q-header reveal elevated class="bg-primary text-white">
+    <q-header
+      reveal
+      elevated
+      class="bg-primary text-white"
+      @click="toggleLeftDrawer"
+    >
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-btn flat dense round icon="menu" aria-label="Menu" />
 
         <q-toolbar-title> My Bank information </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above behavior="mobile">
+    <q-drawer v-model="leftDrawerOpen" show-if-above>
       <q-scroll-area
         style="
           height: calc(100% - 150px);

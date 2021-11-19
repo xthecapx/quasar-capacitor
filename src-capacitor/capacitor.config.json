@@ -1,0 +1,7 @@
+{
+  "appId": "com.ellis.app",
+  "appName": "ellisapp",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}
